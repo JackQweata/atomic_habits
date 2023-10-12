@@ -8,7 +8,9 @@ class ExecutionTimeValidate:
     def __call__(self, value):
         time = dict(value).get(self.estimated_time)
 
-        if time > 120:
+        if not time:
+            return
+        elif time > 120:
             raise serializers.ValidationError('Время выполнения больше 120 сек')
 
 
@@ -46,7 +48,9 @@ class HabitTimeValidate:
     def __call__(self, value):
         frequency = dict(value).get(self.frequency)
 
-        if int(frequency) not in [1, 7]:
+        if not frequency:
+            return
+        elif int(frequency) not in [1, 7]:
             raise serializers.ValidationError('Нельзя выполнять привычку реже, чем 1 раз в 7 дней.')
 
 

@@ -10,7 +10,6 @@ class HabitsRelatedSerializer(serializers.ModelSerializer):
 
 
 class HabitsSerializer(serializers.ModelSerializer):
-    related_habit = HabitsRelatedSerializer()
 
     class Meta:
         model = Habit
