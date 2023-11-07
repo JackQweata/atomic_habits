@@ -1,6 +1,6 @@
-# Курсовая 7. DRF
+# Курсовая 8. DRF && docer-compose
 
-1) Заполнить .env
-2) python manage.py migrate
-3) запуск сelery
-4) python manage.py runserver
+1) Заполнить env
+2) выполнить
+   -) docker-compose build
+   -) docker-compose up
