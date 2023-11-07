@@ -107,10 +107,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.getenv('BD_NAME'),
-        'USER': os.getenv('BD_USER'),
-        'PASSWORD': os.getenv('BD_PASSWORD'),
-        'PORT': os.getenv('BD_PORT')
+        'NAME': 'atomic_habits',
+        'USER': 'postgres',
+        'PASSWORD': 'examplepassword',
+        'HOST': 'db'
     }
 }
 
@@ -150,9 +150,9 @@ STATIC_URL = 'static/'
 
 AUTH_USER_MODEL = 'users.User'
 
-CELERY_BROKER_URL = 'redis://localhost:6379'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379'
-CELERY_TASK_TRACK_STARTED = True
+CELERY_BROKER_URL = 'redis://redis:6379/0'
+# CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+# CELERY_TASK_TRACK_STARTED = True
 
 CELERY_BEAT_SCHEDULE = {
     'daily_newsletter': {
