@@ -1,4 +1,4 @@
-# Курсовая 8. DRF && docer-compose
+# Трекер полезных привычек 
 
 1) Заполнить env
 2) выполнить docker-compose build
